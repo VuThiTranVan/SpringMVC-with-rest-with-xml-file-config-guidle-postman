@@ -12,9 +12,7 @@
 		<jackson.version>2.7.5</jackson.version>
 		<logback.version>1.1.7</logback.version>
 	</properties>
-
 	<dependencies>
-		<!-- spring libraries -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
@@ -81,6 +79,12 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.20</version>
+		</dependency>
+
+		<dependency>
 			<groupId>com.jayway.jsonpath</groupId>
 			<artifactId>json-path-assert</artifactId>
 			<version>2.2.0</version>
@@ -118,5 +122,10 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<testResources>
+			<testResource>
+				<directory>src/main/webapp</directory>
+			</testResource>
+		</testResources>
 	</build>
 </project>
